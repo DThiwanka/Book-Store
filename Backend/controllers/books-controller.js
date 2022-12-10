@@ -43,7 +43,7 @@ const getById = async (req, res, next) => {
 
 const addBook = async (req, res, next) => {
 
-    const { name, author, description, price, available } = req.body;
+    const { name, author, description, price, available, image } = req.body;
 
     let book;
 
@@ -54,7 +54,8 @@ const addBook = async (req, res, next) => {
             author,
             description,
             price,
-            available
+            available,
+            image
 
         });
 
@@ -75,7 +76,7 @@ const addBook = async (req, res, next) => {
 const updateBook = async (req, res, next) => {
 
     const id = req.params.id;
-    const { name, author, description, price, available } = req.body;
+    const { name, author, description, price, available,image } = req.body;
     let book;
 
     try {
@@ -84,7 +85,8 @@ const updateBook = async (req, res, next) => {
             author,
             description,
             price,
-            available
+            available,
+            image
         });
 
         book = await book.save()
@@ -117,7 +119,7 @@ const deleteBook = async (req,res,next) =>{
             return res.status(404).json({ message: "Book Unable to Delete !" })
         }
     
-        return res.status(200).json({ book });
+        return res.status(200).json({ Message: "Book Deleted Successfully" });
 
     }
 
