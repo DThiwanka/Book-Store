@@ -1,9 +1,12 @@
-import React from 'react'
+import {Button} from "@mui/material";
+import React from 'react';
+import "./Book.css";
+
 
 const Book = (props) => {
     const { _id, name, author, description, price, available, image } = props.book;
     return (
-        <div>
+        <div className="card">
             <img src={image} alt={name} />
             <article>
                 By {author}
@@ -12,9 +15,10 @@ const Book = (props) => {
             <h3>{name}</h3>
             <p>Description: {description}</p>
             <h2>Price: {price}</h2>
+            <p>Availability: {available}</p>
 
-            <button>Update</button>
-            <button>Delete</button>
+            <Button variant="contained">Update</Button>&nbsp;
+            <Button variant="contained">Delete</Button>
         </div>
     )
 }
