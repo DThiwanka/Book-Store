@@ -14,11 +14,11 @@ const Book = (props) => {
 
             <h3>{name}</h3>
             <p>Description: {description}</p>
-            <h2>Price: {price}</h2>
-            <p>Availability: {available}</p>
+            <h3>Price: {price}</h3>
+            {/* <p>Availability: {available}</p> */}
 
-            <Button variant="contained">Update</Button>&nbsp;
-            <Button variant="contained">Delete</Button>
+            <Button variant="contained" sx={{mt:'auto'}}>Update</Button>&nbsp;
+            <Button variant="contained" sx={{mt:'auto'}}>Delete</Button>
         </div>
     )
 }
