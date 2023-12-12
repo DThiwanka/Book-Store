@@ -12,7 +12,6 @@ This project is designed to be both educational and easy to use. It can serve as
 
 ## Features
 
-* User authentication with JWT token based authorization
 * CRUD operations for books
 * Search and filter books by title, author, and category
 * Add books to cart and manage orders
